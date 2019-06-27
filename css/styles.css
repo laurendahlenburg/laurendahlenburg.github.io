@@ -20,6 +20,7 @@ header h1 {
 }
 header p {
   font-family: "Roboto", sans-serif;
+  letter-spacing: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
