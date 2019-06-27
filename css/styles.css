@@ -16,6 +16,10 @@ section {
   padding: 10%;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 header {
   background: radial-gradient(#78a9ef75, #161616cc);
   height: 100vh;
