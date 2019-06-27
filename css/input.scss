@@ -3,8 +3,24 @@ $sans: 'Roboto', sans-serif;
 $light: 300;
 $space: 5px;
 
+// Basic Element Styles
+body {
+    font-family: $sans;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $slab;
+}
+blockquote {
+    letter-spacing: $space;
+    font-size: 1.1rem;
+}
+section {
+    height: 100vh;
+    padding: 10%;
+}
+// Detailed styles
 header {
-    background: radial-gradient(#1f1e1e66, #393734d9), url('../img/buie.jpg') no-repeat center center / cover fixed;
+    background: radial-gradient(#78a9ef75, #161616cc);
     height: 100vh;
     position: relative;
 
@@ -20,11 +36,22 @@ header {
         font-size: 5rem;
         width: 100%;
         text-align: center;
-        font-weight: $light;
+        font-weight: bold;
         letter-spacing: 8px;
     }
     p {
-        font-family: $sans;
         letter-spacing: $space;
+    }
+}
+
+.bio {
+    ul li {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        line-height: 45px;
+        span {
+            font-weight: bold;
+            color: orange;
+        }
     }
 }
