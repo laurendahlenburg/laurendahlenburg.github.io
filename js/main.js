@@ -5,9 +5,10 @@ $(document).ready(function () {
         {
             imageSrc: 'img/laptop.jpg'
     });
-    $('.parallax-2').parallax(
+
+    $('.skills').parallax(
         {
-            imageSrc: 'img/buie.jpg'
+            imageSrc: 'img/typing.jpg'
     });
 
     // WAYPOINTS

@@ -1,3 +1,13 @@
+.skills .card ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+.skills .card ul li {
+  line-height: 25px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -45,9 +55,9 @@ header p {
 }
 
 .bio {
-  background: #213146;
+  background: #27374a;
   height: 100%;
-  color: #d2d2d2;
+  color: white;
 }
 .bio h2 {
   text-align: center;
@@ -65,21 +75,49 @@ header p {
   padding-left: 5%;
   text-align: center;
 }
-.bio ul li::after {
-  content: "";
-  height: 125px;
-  margin: 1rem auto;
-  text-align: center;
-  width: 1px;
-  display: block;
-  background: orange;
-}
 .bio ul span {
   font-weight: bold;
   color: #b6cff2;
 }
-.bio .parallax-2 {
+
+.skills {
+  background: radial-gradient(#213146a8, #445f66);
   height: 100vh;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 10% 0;
+}
+.skills h2 {
+  font-size: 3rem;
+}
+.skills .skills-container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .skills .skills-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+}
+.skills .card {
+  border: 1px solid orange;
+  padding: 1rem;
+  margin: 10px;
+  transition: all 0.2s;
+}
+.skills .card:hover {
+  background: #00000082;
+  transform: translateY(-5px);
+  border: 2px solid #fdd68e;
+}
+@media (min-width: 768px) {
+  .skills .card {
+    width: calc(100% / 3 - 5%);
+  }
+}
+.skills .card h3 {
+  font-size: 1.25rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
