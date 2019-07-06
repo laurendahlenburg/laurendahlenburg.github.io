@@ -97,6 +97,14 @@ section h2 {
     font-family: $name;
     font-size: $text-XXL;
 }
+section h2::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 30%;
+    background: $green;
+    margin: 1rem 0;
+}
 
 h3, h4, h5, h6, button {
     font-family: $slab;
@@ -148,14 +156,6 @@ header {
         text-align: left;
         vertical-align: text-top;
     }
-    h2::after {
-        content: '';
-        display: block;
-        height: 2px;
-        width: 30%;
-        background: $green;
-        margin: 1rem 0;
-    }
     h3 {
         font-size: $text-XXL;
         margin-bottom: 0;
@@ -192,19 +192,21 @@ header {
 
 .skills {
     background: $white;
-    height: 100vh;
     position: relative;
     color: $black;
-    text-align: center;
-    padding: 0;
+    padding: 5% 0;
+    height: auto;
     h2 {
         font-size: $text-XXL;
         margin-top: 0;
     }
+    h3 {
+        font-size: $section-head;
+    }
     .skills-container {
-        width: 50%;
+        width: 40%;
         margin-left: 51%;
-        padding: 5% 0;
+        padding: 0 5% 5%;
     }
     img {
         position: absolute;
@@ -218,5 +220,12 @@ header {
     }
     ul li {
         display: inline-block;
+        padding: 0.5rem;
+        border: 2px solid $blue;
+        margin: 5px;
+        transition: all 0.3s;
+        &:hover {
+            transform: translateY(-3px);
+        }
     }
 }

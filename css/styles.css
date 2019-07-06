@@ -60,6 +60,15 @@ section h2 {
   font-size: 3rem;
 }
 
+section h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 30%;
+  background: #d2fa97;
+  margin: 1rem 0;
+}
+
 h3, h4, h5, h6, button {
   font-family: "Roboto Slab", serif;
 }
@@ -113,14 +122,6 @@ header p {
   text-align: left;
   vertical-align: text-top;
 }
-.bio h2::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 30%;
-  background: #d2fa97;
-  margin: 1rem 0;
-}
 .bio h3 {
   font-size: 3rem;
   margin-bottom: 0;
@@ -156,20 +157,22 @@ header p {
 
 .skills {
   background: #f9f9f9;
-  height: 100vh;
   position: relative;
   color: #000000;
-  text-align: center;
-  padding: 0;
+  padding: 5% 0;
+  height: auto;
 }
 .skills h2 {
   font-size: 3rem;
   margin-top: 0;
 }
+.skills h3 {
+  font-size: 3rem;
+}
 .skills .skills-container {
-  width: 50%;
+  width: 40%;
   margin-left: 51%;
-  padding: 5% 0;
+  padding: 0 5% 5%;
 }
 .skills img {
   position: absolute;
@@ -183,6 +186,13 @@ header p {
 }
 .skills ul li {
   display: inline-block;
+  padding: 0.5rem;
+  border: 2px solid #3e5c76;
+  margin: 5px;
+  transition: all 0.3s;
+}
+.skills ul li:hover {
+  transform: translateY(-3px);
 }
 
 /*# sourceMappingURL=styles.css.map */
