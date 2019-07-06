@@ -12,6 +12,17 @@ button {
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  background: transparent;
+  border: 3px solid #d2fa97;
+  padding: 1rem;
+  display: block;
+  margin-top: 2rem;
+}
+button a {
+  color: #f9f9f9;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-decoration: none;
 }
 
 button:before {
@@ -33,6 +44,10 @@ button:before {
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
+}
+
+button.dark a {
+  color: #000000;
 }
 
 button:hover, button:focus, button:active {
@@ -162,19 +177,6 @@ header p {
   color: #d2fa97;
   margin-top: 0;
 }
-.bio button {
-  background: transparent;
-  border: 3px solid #d2fa97;
-  padding: 1rem;
-  display: block;
-  margin-top: 2rem;
-}
-.bio button a {
-  color: #f9f9f9;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-decoration: none;
-}
 
 .skills {
   background: #f9f9f966;
@@ -269,12 +271,15 @@ header p {
 }
 @media (min-width: 768px) {
   .showcase .card {
-    height: 45vh;
+    height: 40vh;
     width: calc(100% / 3 + 2rem);
     display: inline-flex;
     margin: 0;
     overflow: hidden;
   }
+}
+.showcase button.dark {
+  margin: 5% auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
