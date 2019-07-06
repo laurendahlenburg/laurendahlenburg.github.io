@@ -11,6 +11,11 @@ $(document).ready(function () {
             imageSrc: 'img/congruent_pentagon.png'
     });
 
+    $('.contact').parallax(
+        {
+            imageSrc: 'img/desk.jpg'
+    });
+
     // WAYPOINTS
 
     // var $hello = $('.bio h2');
