@@ -44,6 +44,27 @@ button:hover:before, button:focus:before, button:active:before {
   transform: scaleX(1);
 }
 
+.showcase .card figcaption ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+.showcase .card figcaption ul li {
+  line-height: 25px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.showcase .card figcaption ul li, .skills ul li {
+  display: inline-block;
+  padding: 0.5rem;
+  border: 2px solid #3e5c76;
+  margin: 5px;
+  transition: all 0.3s;
+}
+.showcase .card figcaption ul li:hover, .skills ul li:hover {
+  transform: translateY(-3px);
+}
+
 .col-6 {
   width: calc(100% / 2 - 1rem);
   vertical-align: top;
@@ -184,21 +205,16 @@ header p {
   object-fit: cover;
   box-shadow: inset 0 0 0 -10000000px black;
 }
-.skills ul li {
-  display: inline-block;
-  padding: 0.5rem;
-  border: 2px solid #3e5c76;
-  margin: 5px;
-  transition: all 0.3s;
-}
-.skills ul li:hover {
-  transform: translateY(-3px);
-}
-
 .showcase {
+  height: auto;
   background: #f9f9f9;
   color: #000000;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .showcase .portfolio {
+    text-align: left;
+  }
 }
 .showcase h2 {
   margin-top: 0;
@@ -210,15 +226,55 @@ header p {
   font-size: 3rem;
 }
 .showcase .card {
-  display: inline-flex;
-  flex-wrap: wrap;
+  padding: 5%;
   position: relative;
+  box-shadow: 0px -1px 10px 0px #00000029;
 }
+.showcase .card figcaption,
 .showcase .card img {
-  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+.showcase .card figcaption {
+  padding: 5%;
+  color: #f9f9f9;
+  opacity: 0;
+  transition: all 0.65s;
+  text-align: left;
+  width: 100%;
+}
+.showcase .card figcaption h4 {
+  font-size: 2rem;
+}
+.showcase .card figcaption h4,
+.showcase .card figcaption ul {
+  width: 70%;
+}
+.showcase .card img {
+  object-fit: cover;
+  width: 101%;
+  height: 101%;
+  transition: all 0.5s;
+}
+.showcase .card:hover figcaption {
+  opacity: 1;
+  background: #26374a;
+}
+.showcase .card:hover img {
+  transform: scale(1.25);
+  filter: blur(2px) saturate(0);
+}
+@media (min-width: 768px) {
+  .showcase .card {
+    height: 45vh;
+    width: calc(100% / 3 + 2rem);
+    display: inline-flex;
+    margin: 0;
+    overflow: hidden;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

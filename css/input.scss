@@ -65,7 +65,7 @@ button:hover:before, button:focus:before, button:active:before {
   transform: scaleX(1);
 }
 
-// Content Standards
+// EXTENSIONS
 %ul-standard {
     padding-left: 0;
     list-style-type: none;
@@ -75,7 +75,16 @@ button:hover:before, button:focus:before, button:active:before {
         font-weight: bold;
     }
 }
-
+%li-boxes {
+    display: inline-block;
+    padding: 0.5rem;
+    border: 2px solid $blue;
+    margin: 5px;
+    transition: all 0.3s;
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
 // Columns
 %col-6 {
     width: calc(100% / 2 - 1rem);
@@ -219,21 +228,20 @@ header {
         box-shadow: inset 0 0 0 -10000000px black;
     }
     ul li {
-        display: inline-block;
-        padding: 0.5rem;
-        border: 2px solid $blue;
-        margin: 5px;
-        transition: all 0.3s;
-        &:hover {
-            transform: translateY(-3px);
-        }
+        @extend %li-boxes;
     }
 }
 
 .showcase {
+    height: auto;
     background: $white;
     color: $black;
     text-align: center;
+    @media(min-width: 768px) {
+        .portfolio {
+            text-align: left;
+        }
+    }
     h2 {
         margin-top: 0;
         &::after {
@@ -244,14 +252,60 @@ header {
         font-size: $section-head;
     }
     & .card {
-        display: inline-flex;
-        flex-wrap: wrap;
+        padding: 5%;
         position: relative;
-    }
-    & .card img {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        box-shadow: 0px -1px 10px 0px #00000029;
+        figcaption,
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        figcaption {
+            padding: 5%;
+            color: $white;
+            opacity: 0;
+            transition: all 0.65s;
+            text-align: left;
+            width: 100%;
+            h4 {
+                font-size: $text-large;
+            }
+            h4,
+            ul {
+                width: 70%;
+            }
+            ul {
+                @extend %ul-standard;
+                li {
+                    @extend %li-boxes;
+                }
+            }
+        }
+        img {
+            object-fit: cover;
+            width: 101%;
+            height: 101%;
+            transition: all 0.5s;
+        }
+        &:hover {
+            figcaption {
+                opacity: 1;
+                background: #26374a;
+            }
+            img {
+                transform: scale(1.25);
+                filter: blur(2px)saturate(0);
+            }
+        }
+        @media(min-width: 768px) {
+            height: 45vh;
+            width: calc(100% / 3 + 2rem);
+            display: inline-flex;
+            margin: 0;
+            overflow: hidden;
+        }
     }
 }
