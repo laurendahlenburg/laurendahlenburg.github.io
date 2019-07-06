@@ -6,7 +6,7 @@ $(document).ready(function () {
             imageSrc: 'img/typing.jpg'
     });
 
-    $('.skills').parallax(
+    $('.skills-img').parallax(
         {
             imageSrc: 'img/laptop.jpg'
     });
