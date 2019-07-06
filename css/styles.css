@@ -156,7 +156,7 @@ header p {
 }
 
 .skills {
-  background: #f9f9f9;
+  background: #f9f9f966;
   position: relative;
   color: #000000;
   padding: 5% 0;
@@ -193,6 +193,32 @@ header p {
 }
 .skills ul li:hover {
   transform: translateY(-3px);
+}
+
+.showcase {
+  background: #f9f9f9;
+  color: #000000;
+  text-align: center;
+}
+.showcase h2 {
+  margin-top: 0;
+}
+.showcase h2::after {
+  margin: auto;
+}
+.showcase h3 {
+  font-size: 3rem;
+}
+.showcase .card {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.showcase .card img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -191,7 +191,7 @@ header {
 }
 
 .skills {
-    background: $white;
+    background: #f9f9f966;
     position: relative;
     color: $black;
     padding: 5% 0;
@@ -227,5 +227,31 @@ header {
         &:hover {
             transform: translateY(-3px);
         }
+    }
+}
+
+.showcase {
+    background: $white;
+    color: $black;
+    text-align: center;
+    h2 {
+        margin-top: 0;
+        &::after {
+            margin: auto;
+        }
+    }
+    h3 {
+        font-size: $section-head;
+    }
+    & .card {
+        display: inline-flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    & .card img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
