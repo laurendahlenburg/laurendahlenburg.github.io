@@ -3,12 +3,12 @@ $(document).ready(function () {
 
     $('header').parallax(
         {
-            imageSrc: 'img/laptop.jpg'
+            imageSrc: 'img/typing.jpg'
     });
 
     $('.skills').parallax(
         {
-            imageSrc: 'img/typing.jpg'
+            imageSrc: 'img/laptop.jpg'
     });
 
     // WAYPOINTS
