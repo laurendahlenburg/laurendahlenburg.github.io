@@ -1,3 +1,10 @@
+// Color Palette
+$blue: #3e5c76;
+$green: #d2fa97;
+$gray: #d1e6e6;
+$black: #000000;
+$white: #f9f9f9;
+
 //Fonts
 $name: 'Kristi', cursive;
 $slab: 'Roboto Slab', serif;
@@ -8,13 +15,63 @@ $light: 300;
 $space: 5px;
 $section-head: 3rem;
 
+// Font Sizes
+$text-small: 1rem;
+$text-medium: 1.25rem;
+$text-large: 2rem;
+$text-XL: 2.5rem;
+$text-XXL: 3rem;
+
+// button
+/* Shutter Out Horizontal - Courtesy Hover.css */
+button {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #d2fa971c;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+button:hover, button:focus, button:active {
+  color: white;
+}
+button:hover:before, button:focus:before, button:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 // Content Standards
 %ul-standard {
     padding-left: 0;
     list-style-type: none;
     li {
         line-height: 25px;
-        font-size: 1.25rem;
+        font-size: $text-medium;
         font-weight: bold;
     }
 }
@@ -36,12 +93,17 @@ $section-head: 3rem;
 body {
     font-family: $sans;
 }
-h2, h3, h4, h5, h6 {
+section h2 {
+    font-family: $name;
+    font-size: $text-XXL;
+}
+
+h3, h4, h5, h6, button {
     font-family: $slab;
 }
 blockquote {
     letter-spacing: $space;
-    font-size: 1.1rem;
+    font-size: $text-medium;
 }
 section {
     height: 100vh;
@@ -81,34 +143,49 @@ header {
     background: #27374a;
     height: 100%;
     color: white;
-    h2 {
-        text-align: center;
-        font-size: $section-head;
+    text-align: center;
+    .col-6 {
+        text-align: left;
+        vertical-align: text-top;
     }
-    ul {
-        width: 75%;
-        margin: 5% auto;
-        li {
-            font-size: 1.25rem;
-            margin-bottom: 3rem;
-            line-height: 45px;
-            list-style-type: none;
-            // border-left: 1px solid orange;
-            padding-left: 5%;
-            text-align: center;
-        }
-        // li::after {
-        //         content: '';
-        //         height: 100px;
-        //         margin: 1rem auto;
-        //         text-align: center;
-        //         width: 1px;
-        //         display: block;
-        //         background: orange;
-        //     }
-        span {
+    h2::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 30%;
+        background: $green;
+        margin: 1rem 0;
+    }
+    h3 {
+        font-size: $text-XXL;
+        margin-bottom: 0;
+    }
+    .col-6:first-of-type {
+        max-width: 400px;
+    }
+    .col-6:first-of-type p {
+        font-size: $text-medium;
+        line-height: 30px;
+    }
+    .col-6 h4 {
+        font-size: $text-large;
+        margin-bottom: 0;
+    }
+    .col-6 h4 {
+        color: $green;
+        margin-top: 0;
+    }
+    button {
+        background: transparent;
+        border: 3px solid $green;
+        padding: 1rem;
+        display: block;
+        margin-top: 2rem;
+        a {
+            color: $white;
             font-weight: bold;
-            color: #b6cff2;
+            letter-spacing: 3px;
+            text-decoration: none;
         }
     }
 }
@@ -121,7 +198,7 @@ header {
     text-align: center;
     padding: 10% 0;
     h2 {
-        font-size: $section-head;
+        font-size: $text-XXL;
     }
     .skills-container {
         width: 100%;
@@ -145,7 +222,7 @@ header {
             width: calc(100% / 3 - 5%);
         }
         h3 {
-            font-size: 1.25rem;
+            font-size: $text-medium;
         }
         ul {
             @extend %ul-standard;
