@@ -6,9 +6,9 @@ $(document).ready(function () {
             imageSrc: 'img/typing.jpg'
     });
 
-    $('.skills-img').parallax(
+    $('.skills').parallax(
         {
-            imageSrc: 'img/laptop.jpg'
+            imageSrc: 'img/congruent_pentagon.png'
     });
 
     // WAYPOINTS
