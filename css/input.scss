@@ -132,6 +132,9 @@ section h2::after {
 h3, h4, h5, h6, button {
     font-family: $slab;
 }
+section h3 {
+    font-size: $section-head;
+}
 blockquote {
     letter-spacing: $space;
     font-size: $text-medium;
@@ -210,9 +213,6 @@ header {
         font-size: $text-XXL;
         margin-top: 0;
     }
-    h3 {
-        font-size: $section-head;
-    }
     .skills-container {
         width: 40%;
         margin-left: 51%;
@@ -248,9 +248,6 @@ header {
         &::after {
             margin: auto;
         }
-    }
-    h3 {
-        font-size: $section-head;
     }
     & .card {
         padding: 5%;
@@ -305,7 +302,7 @@ header {
             height: 40vh;
             width: calc(100% / 3 + 2rem);
             display: inline-flex;
-            margin: 0;
+            margin: 10px;
             overflow: hidden;
         }
     }
@@ -315,5 +312,11 @@ header {
 }
 
 .contact {
+    height: auto;
     background: linear-gradient(to top, #0000006e, #000000a1);
+    color: $white;
+    button {
+        display: inline-block;
+        margin-top: 0;
+    }
 }

@@ -109,6 +109,10 @@ h3, h4, h5, h6, button {
   font-family: "Roboto Slab", serif;
 }
 
+section h3 {
+  font-size: 3rem;
+}
+
 blockquote {
   letter-spacing: 5px;
   font-size: 1.25rem;
@@ -189,9 +193,6 @@ header p {
   font-size: 3rem;
   margin-top: 0;
 }
-.skills h3 {
-  font-size: 3rem;
-}
 .skills .skills-container {
   width: 40%;
   margin-left: 51%;
@@ -223,9 +224,6 @@ header p {
 }
 .showcase h2::after {
   margin: auto;
-}
-.showcase h3 {
-  font-size: 3rem;
 }
 .showcase .card {
   padding: 5%;
@@ -274,7 +272,7 @@ header p {
     height: 40vh;
     width: calc(100% / 3 + 2rem);
     display: inline-flex;
-    margin: 0;
+    margin: 10px;
     overflow: hidden;
   }
 }
@@ -283,7 +281,13 @@ header p {
 }
 
 .contact {
+  height: auto;
   background: linear-gradient(to top, #0000006e, #000000a1);
+  color: #f9f9f9;
+}
+.contact button {
+  display: inline-block;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
