@@ -204,7 +204,7 @@ header {
 }
 
 .skills {
-    background: #f9f9f966;
+    background: #d1e6e6;
     position: relative;
     color: $black;
     padding: 5% 0;
@@ -226,7 +226,7 @@ header {
         height: 100%;
         overflow: hidden;
         object-fit: cover;
-        box-shadow: inset 0 0 0 -10000000px black;
+        box-shadow: inset 1px 1px 1px 10000000px black;
     }
     ul li {
         @extend %li-boxes;
