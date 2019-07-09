@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     $('.contact').parallax(
         {
-            imageSrc: 'img/desk.jpg'
+            imageSrc: 'img/congruent_pentagon.png'
     });
 
     // WAYPOINTS

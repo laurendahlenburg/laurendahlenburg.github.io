@@ -100,15 +100,19 @@ button:hover:before, button:focus:before, button:active:before {
         transform: translateY(-3px);
     }
 }
-// Columns
-%col-6 {
-    width: calc(100% / 2 - 1rem);
-    vertical-align: top;
-    display: inline-block;
-    padding: 0.25rem;
+%links {
+    color: $green;
+    text-decoration: none;
 }
-.col-6 {
-    @extend %col-6;
+// Columns
+
+@media(min-width: 768px) {
+    .col-6 {
+        width: calc(100% / 2 - 1rem);
+        vertical-align: top;
+        display: inline-block;
+        padding: 0.25rem;
+    }
 }
 
 // Font import
@@ -118,8 +122,10 @@ body {
     font-family: $sans;
 }
 section h2 {
-    font-family: $name;
-    font-size: $text-XXL;
+    font-family: $sans;
+    font-size: $text-small;
+    letter-spacing: $space;
+    text-transform: uppercase;
 }
 section h2::after {
     content: '';
@@ -135,6 +141,7 @@ h3, h4, h5, h6, button {
 }
 section h3 {
     font-size: $section-head;
+    text-shadow: 1px 1px 5px #00000029;
 }
 blockquote {
     letter-spacing: $space;
@@ -146,6 +153,10 @@ section {
 }
 .hide {
     visibility: hidden;
+}
+p a,
+li a {
+    @extend %links;
 }
 // Detailed styles
 
@@ -160,7 +171,7 @@ header {
 
     // Animated Gradient Effect Courtesy of Manuel Pinto. Codepen: https://codepen.io/P1N2O/pen/pyBNzX
 
-    background: linear-gradient(-45deg, #3e5c76e0, #d2fa97e0, #d1e6e6e0);
+    background: linear-gradient(-45deg, #202020e0, #898989cc, #d2fa97a1);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
@@ -218,6 +229,7 @@ header {
         text-align: center;
         font-weight: bold;
         transform: rotateX(33deg);
+        text-shadow: 1px 1px 5px #00000040;
     }
     p {
         letter-spacing: $space;
@@ -226,16 +238,29 @@ header {
 
 .bio {
     background: #27374a;
-    height: 100vh;
+    height: 70vh;
     color: white;
+    padding: 15% 5% 0;
     text-align: center;
     .col-6 {
         text-align: left;
-        vertical-align: text-top;
+        vertical-align: top;
     }
     h3 {
         font-size: $text-XXL;
         margin-bottom: 0;
+    }
+    ul {
+        @extend %ul-standard;
+        li {
+            margin: 0 0 1.5rem;
+            padding-left: 1rem;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+            &:hover {
+                border-left: 3px solid $green;
+            }
+        }
     }
     .col-6:first-of-type {
         max-width: 400px;
@@ -255,29 +280,34 @@ header {
 }
 
 .skills {
-    background: #d1e6e6;
+    background: linear-gradient(to top, #27374afa, #d2fa978a);
+    color: $white;
     position: relative;
-    color: $black;
-    padding: 5% 0;
     height: auto;
+    overflow: hidden;
     h2 {
-        font-size: $text-XXL;
         margin-top: 0;
     }
     .skills-container {
-        width: 40%;
-        margin-left: 51%;
-        padding: 0 5% 5%;
+        width: 70%;
+        margin-left: 30%;
+        padding: 0 0 5%;
+        div {
+            width: 70%;
+            margin: auto;
+        }
     }
     img {
         position: absolute;
         left:0;
         top: 0;
-        width: 50%;
+        width: 30%;
         height: 100%;
         overflow: hidden;
         object-fit: cover;
-        box-shadow: inset 1px 1px 1px 10000000px black;
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+
+
     }
     ul li {
         @extend %li-boxes;
@@ -301,60 +331,65 @@ header {
         }
     }
     & .card {
+        background: white;
         padding: 5%;
         position: relative;
-        box-shadow: 0px -1px 10px 0px #00000029;
-        figcaption,
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        figcaption {
-            padding: 5%;
-            color: $white;
-            opacity: 0;
-            transition: all 0.65s;
-            text-align: left;
-            width: 100%;
-            h4 {
-                font-size: $text-large;
-            }
-            h4,
-            ul {
-                width: 70%;
-            }
-            ul {
-                @extend %ul-standard;
-                li {
-                    @extend %li-boxes;
-                }
+        box-shadow: 0px -1px 10px 0px #00000014;
+        ul {
+            @extend %ul-standard;
+            li {
+                @extend %li-boxes;
             }
         }
         img {
-            object-fit: cover;
-            width: 101%;
-            height: 101%;
-            transition: all 0.5s;
+            width: 100%;
         }
-        &:hover {
-            figcaption {
-                opacity: 1;
-                background: #26374a;
-            }
-            img {
-                transform: scale(1.25);
-                filter: blur(2px)saturate(0);
-            }
-        }
-        @media(min-width: 768px) {
-            height: 35vh;
+        @media (min-width: 768px) {
             width: calc(100% / 3 + 2rem);
+            height: 35vh;
             display: inline-flex;
             margin: 10px;
             overflow: hidden;
+            figcaption,
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            figcaption {
+                padding: 5%;
+                color: $white;
+                opacity: 0;
+                transition: all 0.65s;
+                text-align: left;
+                width: 100%;
+                height: 100%;
+                h4 {
+                    font-size: $text-large;
+                }
+                h4,
+                ul {
+                    width: 70%;
+                }
+            }
+            img {
+                object-fit: cover;
+                width: 101%;
+                height: 101%;
+                transition: all 0.5s;
+            }
+            &:hover {
+                figcaption {
+                    opacity: 1;
+                    background: #26374a;
+                }
+                img {
+                    transform: scale(1.25);
+                    filter: blur(2px)saturate(0);
+                }
+            }
         }
     }
     button.dark {
@@ -364,7 +399,7 @@ header {
 
 .contact {
     height: auto;
-    background: linear-gradient(to top, #0000006e, #000000a1);
+    background: linear-gradient(to top, #27374afa, #d2fa978a);
     color: $white;
     button {
         display: inline-block;

@@ -60,41 +60,50 @@ button:hover:before, button:focus:before, button:active:before {
   transform: scaleX(1);
 }
 
-.showcase .card figcaption ul {
+.showcase .card ul, .bio ul {
   padding-left: 0;
   list-style-type: none;
 }
-.showcase .card figcaption ul li {
+.showcase .card ul li, .bio ul li {
   line-height: 25px;
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-.showcase .card figcaption ul li, .skills ul li {
+.showcase .card ul li, .skills ul li {
   display: inline-block;
   padding: 0.5rem;
   border: 2px solid #3e5c76;
   margin: 5px;
   transition: all 0.3s;
 }
-.showcase .card figcaption ul li:hover, .skills ul li:hover {
+.showcase .card ul li:hover, .skills ul li:hover {
   transform: translateY(-3px);
 }
 
-.col-6 {
-  width: calc(100% / 2 - 1rem);
-  vertical-align: top;
-  display: inline-block;
-  padding: 0.25rem;
+p a,
+li a {
+  color: #d2fa97;
+  text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .col-6 {
+    width: calc(100% / 2 - 1rem);
+    vertical-align: top;
+    display: inline-block;
+    padding: 0.25rem;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
 }
 
 section h2 {
-  font-family: "Kristi", cursive;
-  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 section h2::after {
@@ -112,6 +121,7 @@ h3, h4, h5, h6, button {
 
 section h3 {
   font-size: 3rem;
+  text-shadow: 1px 1px 5px #00000029;
 }
 
 blockquote {
@@ -134,7 +144,7 @@ header {
   width: 100wh;
   height: 100vh;
   color: #fff;
-  background: linear-gradient(-45deg, #3e5c76e0, #d2fa97e0, #d1e6e6e0);
+  background: linear-gradient(-45deg, #202020e0, #898989cc, #d2fa97a1);
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
@@ -189,6 +199,7 @@ header h1 {
   text-align: center;
   font-weight: bold;
   transform: rotateX(33deg);
+  text-shadow: 1px 1px 5px #00000040;
 }
 header p {
   letter-spacing: 5px;
@@ -196,17 +207,27 @@ header p {
 
 .bio {
   background: #27374a;
-  height: 100vh;
+  height: 70vh;
   color: white;
+  padding: 15% 5% 0;
   text-align: center;
 }
 .bio .col-6 {
   text-align: left;
-  vertical-align: text-top;
+  vertical-align: top;
 }
 .bio h3 {
   font-size: 3rem;
   margin-bottom: 0;
+}
+.bio ul li {
+  margin: 0 0 1.5rem;
+  padding-left: 1rem;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+.bio ul li:hover {
+  border-left: 3px solid #d2fa97;
 }
 .bio .col-6:first-of-type {
   max-width: 400px;
@@ -225,30 +246,33 @@ header p {
 }
 
 .skills {
-  background: #d1e6e6;
+  background: linear-gradient(to top, #27374afa, #d2fa978a);
+  color: #f9f9f9;
   position: relative;
-  color: #000000;
-  padding: 5% 0;
   height: auto;
+  overflow: hidden;
 }
 .skills h2 {
-  font-size: 3rem;
   margin-top: 0;
 }
 .skills .skills-container {
-  width: 40%;
-  margin-left: 51%;
-  padding: 0 5% 5%;
+  width: 70%;
+  margin-left: 30%;
+  padding: 0 0 5%;
+}
+.skills .skills-container div {
+  width: 70%;
+  margin: auto;
 }
 .skills img {
   position: absolute;
   left: 0;
   top: 0;
-  width: 50%;
+  width: 30%;
   height: 100%;
   overflow: hidden;
   object-fit: cover;
-  box-shadow: inset 1px 1px 1px 10000000px black;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
 .showcase {
   height: auto;
@@ -268,54 +292,59 @@ header p {
   margin: auto;
 }
 .showcase .card {
+  background: white;
   padding: 5%;
   position: relative;
-  box-shadow: 0px -1px 10px 0px #00000029;
-}
-.showcase .card figcaption,
-.showcase .card img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.showcase .card figcaption {
-  padding: 5%;
-  color: #f9f9f9;
-  opacity: 0;
-  transition: all 0.65s;
-  text-align: left;
-  width: 100%;
-}
-.showcase .card figcaption h4 {
-  font-size: 2rem;
-}
-.showcase .card figcaption h4,
-.showcase .card figcaption ul {
-  width: 70%;
+  box-shadow: 0px -1px 10px 0px #00000014;
 }
 .showcase .card img {
-  object-fit: cover;
-  width: 101%;
-  height: 101%;
-  transition: all 0.5s;
-}
-.showcase .card:hover figcaption {
-  opacity: 1;
-  background: #26374a;
-}
-.showcase .card:hover img {
-  transform: scale(1.25);
-  filter: blur(2px) saturate(0);
+  width: 100%;
 }
 @media (min-width: 768px) {
   .showcase .card {
-    height: 35vh;
     width: calc(100% / 3 + 2rem);
+    height: 35vh;
     display: inline-flex;
     margin: 10px;
     overflow: hidden;
+  }
+  .showcase .card figcaption,
+.showcase .card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .showcase .card figcaption {
+    padding: 5%;
+    color: #f9f9f9;
+    opacity: 0;
+    transition: all 0.65s;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+  }
+  .showcase .card figcaption h4 {
+    font-size: 2rem;
+  }
+  .showcase .card figcaption h4,
+.showcase .card figcaption ul {
+    width: 70%;
+  }
+  .showcase .card img {
+    object-fit: cover;
+    width: 101%;
+    height: 101%;
+    transition: all 0.5s;
+  }
+  .showcase .card:hover figcaption {
+    opacity: 1;
+    background: #26374a;
+  }
+  .showcase .card:hover img {
+    transform: scale(1.25);
+    filter: blur(2px) saturate(0);
   }
 }
 .showcase button.dark {
@@ -324,7 +353,7 @@ header p {
 
 .contact {
   height: auto;
-  background: linear-gradient(to top, #0000006e, #000000a1);
+  background: linear-gradient(to top, #27374afa, #d2fa978a);
   color: #f9f9f9;
 }
 .contact button {
