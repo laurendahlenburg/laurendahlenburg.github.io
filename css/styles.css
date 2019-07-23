@@ -9683,10 +9683,19 @@ section h2::after {
 
 .jumbotron {
   background: linear-gradient(45deg, #4b4b4b54, #030303ed), url("../img/me-and-buie.jpg");
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 1368px) {
+  .jumbotron {
+    padding: 0 0 5%;
+  }
 }
 .jumbotron h2 {
   margin-top: 7%;
@@ -9695,16 +9704,32 @@ section h2::after {
 .jumbotron p {
   font-family: "Oswald", sans-serif;
   color: white;
-  max-width: 60%;
+}
+@media (min-width: 1368px) {
+  .jumbotron h2,
+.jumbotron p {
+    width: 60%;
+  }
 }
 .jumbotron p {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  .jumbotron p {
+    font-size: 1.2rem;
+  }
 }
 .jumbotron h1 {
   font-family: "Oswald", sans-serif;
   letter-spacing: 3px;
-  font-size: 5rem;
-  margin: 3% 0;
+  font-size: 2.5rem;
+  margin: 2rem 0 0.5rem;
+}
+@media (min-width: 768px) {
+  .jumbotron h1 {
+    font-size: 5rem;
+  }
 }
 .jumbotron h2,
 .jumbotron h1,
@@ -9718,7 +9743,6 @@ section h2::after {
   padding: 1rem;
   margin-top: 3%;
   border-radius: 0;
-  width: 20%;
   box-shadow: 0 4px 10px #2e2e2e87;
   text-transform: uppercase;
   letter-spacing: 3px;

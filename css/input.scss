@@ -1,5 +1,5 @@
 // Import bootstrap
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 // Bootstrap Variable Overrides
 $theme-colors: (
@@ -37,14 +37,19 @@ section h2 {
     font-family: $body-font;
 }
 .jumbotron {
-    // background: 
+    // background:
     //     linear-gradient(135deg, #036b6175 25%, transparent 25%) -50px 0, linear-gradient(225deg, #4ac3b7cc 25%, #00000000 25%) -50px 0, linear-gradient(315deg, #009587c2 25%, transparent 25%), linear-gradient(45deg, #1fb0a2bf 25%, #317d75c2 25%), url(../img/woods.jpg);
     // background-color: #41d0c2;
     background: linear-gradient(45deg, #4b4b4b54, #030303ed), url('../img/me-and-buie.jpg');
-    background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: auto;
+    @media(min-width: 768px) {
+        background-attachment: fixed;
+    }
+    @media(min-width: 1368px) {
+        padding: 0 0 5%;
+    }
     h2 {
         margin-top: 7%;
         @extend %sectionHead;
@@ -53,16 +58,25 @@ section h2 {
     p {
         font-family: $body-font;
         color: white;
-        max-width: 60%;
+        @media(min-width: 1368px) {
+            width: 60%;
+        }
     }
     p {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin: 2rem 0;
+        @media(min-width: 768px) {
+            font-size: 1.2rem;
+        }
     }
     h1 {
         font-family: $body-font;
         letter-spacing: 3px;
-        font-size: 5rem;
-        margin: 3% 0;
+        font-size: 2.5rem;
+        margin: 2rem 0 0.5rem;
+        @media(min-width: 768px) {
+            font-size: 5rem;
+        }
     }
     h2,
     h1,
@@ -76,7 +90,6 @@ section h2 {
         padding: 1rem;
         margin-top: 3%;
         border-radius: 0;
-        width: 20%;
         box-shadow: 0 4px 10px #2e2e2e87;
         text-transform: uppercase;
         letter-spacing: 3px;
@@ -125,5 +138,5 @@ section h2 {
     background: #CCDBDC;
     padding: 5%;
     text-align: center;
-    
+
 }
