@@ -9695,6 +9695,7 @@ section h2::after {
 @media (min-width: 1368px) {
   .jumbotron {
     padding: 0 0 5%;
+    height: 100vh;
   }
 }
 .jumbotron h2 {
