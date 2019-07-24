@@ -9655,7 +9655,7 @@ h3 {
     border-color: #dee2e6;
   }
 }
-.skills .col-4.card h3, .jumbotron h2 {
+.skills .card h3, .jumbotron h2 {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 1rem;
@@ -9759,25 +9759,34 @@ section h2::after {
   text-align: center;
   padding: 5%;
 }
-.skills .col-4.card {
-  background: transparent;
-  border: none;
+.skills .card-deck {
+  margin: 5% auto 10%;
 }
-.skills .col-4.card h3 {
+.skills .card {
+  margin-bottom: 0;
+  background: white;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.skills .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1px 20px #eeeeee;
+}
+.skills .card h3 {
   margin: 1rem auto;
   color: #53A2BE;
 }
-.skills .col-4.card img {
+.skills .card img {
   width: 100%;
   max-width: 45px;
   margin: 2rem auto;
   display: block;
 }
-.skills .col-4.card ul {
+.skills .card ul {
   text-align: center;
   padding-left: 0;
 }
-.skills .col-4.card ul li {
+.skills .card ul li {
   list-style-type: none;
   color: gray;
   font-size: 0.9rem;

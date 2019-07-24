@@ -106,29 +106,36 @@ section h2 {
     background: #f7f7f7;
     text-align: center;
     padding: 5%;
-    .col-4 {
-        &.card {
-            background: transparent;
-            border: none;
-            h3 {
-                @extend %sectionHead;
-                margin: 1rem auto;
-                color: #53A2BE;
-            }
-            img {
-                width: 100%;
-                max-width: 45px;
-                margin: 2rem auto;
-                display: block;
-            }
-            ul {
-                text-align: center;
-                padding-left: 0;
-                li {
-                    list-style-type: none;
-                    color: gray;
-                    font-size: 0.9rem;
-                }
+    .card-deck {
+        margin: 5% auto 10%;
+    }
+    .card {
+        margin-bottom: 0;
+        background: white;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1px 20px #eeeeee;
+        }
+        h3 {
+            @extend %sectionHead;
+            margin: 1rem auto;
+            color: #53A2BE;
+        }
+        img {
+            width: 100%;
+            max-width: 45px;
+            margin: 2rem auto;
+            display: block;
+        }
+        ul {
+            text-align: center;
+            padding-left: 0;
+            li {
+                list-style-type: none;
+                color: gray;
+                font-size: 0.9rem;
             }
         }
     }
