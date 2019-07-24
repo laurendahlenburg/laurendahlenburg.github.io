@@ -9755,7 +9755,12 @@ section h2::after {
   text-decoration: none;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 .skills {
+  visibility: visible;
   background: #f7f7f7;
   text-align: center;
   padding: 5%;

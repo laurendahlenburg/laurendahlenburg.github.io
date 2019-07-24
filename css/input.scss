@@ -102,8 +102,11 @@ section h2 {
         }
     }
 }
-
+.hide {
+    visibility: hidden;
+}
 .skills {
+    visibility: visible;
     background: #f7f7f7;
     text-align: center;
     padding: 5%;
