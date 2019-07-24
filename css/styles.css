@@ -9768,9 +9768,11 @@ section h2::after {
   border: none;
   transition: all 0.3s ease-in-out;
 }
-.skills .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1px 20px #eeeeee;
+@media (min-width: 960px) {
+  .skills .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1px 20px #eeeeee;
+  }
 }
 .skills .card h3 {
   margin: 1rem auto;

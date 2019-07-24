@@ -115,8 +115,10 @@ section h2 {
         border: none;
         transition: all 0.3s ease-in-out;
         &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 1px 20px #eeeeee;
+            @media (min-width: 960px) {
+                    transform: translateY(-3px);
+                    box-shadow: 0 1px 20px #eeeeee;
+                }
         }
         h3 {
             @extend %sectionHead;
