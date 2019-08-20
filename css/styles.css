@@ -9661,6 +9661,27 @@ h3 {
   font-size: 1rem;
 }
 
+.portfolio button, .jumbotron .btn-default {
+  background: #53A2BE;
+  padding: 1rem;
+  margin-top: 3%;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: none;
+  transition: 0.2s;
+}
+.portfolio button:hover, .jumbotron .btn-default:hover {
+  background: #488fa8;
+  box-shadow: 1px 2px 4px #2e2e2e87;
+}
+.portfolio button a, .jumbotron .btn-default a {
+  color: white;
+}
+.portfolio button a:hover, .jumbotron .btn-default a:hover {
+  text-decoration: none;
+}
+
 section h2 {
   text-align: center;
   font-size: 3rem;
@@ -9740,19 +9761,7 @@ section h2::after {
   color: white;
 }
 .jumbotron .btn-default {
-  background: #53A2BE;
-  padding: 1rem;
-  margin-top: 3%;
-  border-radius: 0;
-  box-shadow: 0 4px 10px #2e2e2e87;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-.jumbotron .btn-default:hover {
-  background: #488fa8;
-}
-.jumbotron .btn-default a:hover {
-  text-decoration: none;
+  margin-bottom: 5%;
 }
 
 .hide {
@@ -9798,6 +9807,27 @@ section h2::after {
   list-style-type: none;
   color: gray;
   font-size: 0.9rem;
+}
+
+.portfolio {
+  padding: 10% 5%;
+}
+.portfolio h2 {
+  text-align: left;
+}
+.portfolio h2::after {
+  margin: 1rem 0;
+}
+.portfolio img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .portfolio .col {
+    width: calc(100% / 2 - 1rem);
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 .contact {
