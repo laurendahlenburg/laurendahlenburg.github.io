@@ -53,13 +53,20 @@ section h2 {
         margin: 1rem auto;
     }
 }
-.navbar-brand {
-    font-family: $accent-font;
-    font-size: 2.5rem;
+nav.navbar {
+    padding: 1rem 5%;
+    .navbar-brand {
+        font-family: $accent-font;
+        font-size: 2.5rem;
+    }
+    .nav-link {
+        font-family: $body-font;
+        font-size: 1.25rem;
+    }
 }
-.nav-link,
- {
-    font-family: $body-font;
+.fixed-top.scrolled {
+  background-color: #192737;
+  transition: background-color 300ms linear;
 }
 .jumbotron {
     background: linear-gradient(45deg, #2a3462cf, #08203d91), url('../img/me-and-buie.jpg');
@@ -97,7 +104,6 @@ section h2 {
         }
     }
     h1 {
-        letter-spacing: 3px;
         font-size: 3rem;
         margin: 3rem 0 0.5rem;
         @media(min-width: 768px) {
@@ -186,7 +192,10 @@ section h2 {
 }
 
 .contact {
-    background: #CCDBDC;
+    background: #182737;
+    color: white;
+    color: rgb(255,255,255);
+    color: #ffffff;
     padding: 5%;
     text-align: center;
 

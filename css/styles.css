@@ -9698,13 +9698,21 @@ section h2::after {
   margin: 1rem auto;
 }
 
-.navbar-brand {
+nav.navbar {
+  padding: 1rem 5%;
+}
+nav.navbar .navbar-brand {
   font-family: "Kristi", cursive;
   font-size: 2.5rem;
 }
-
-.nav-link {
+nav.navbar .nav-link {
   font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+}
+
+.fixed-top.scrolled {
+  background-color: #192737;
+  transition: background-color 300ms linear;
 }
 
 .jumbotron {
@@ -9752,7 +9760,6 @@ section h2::after {
   }
 }
 .jumbotron h1 {
-  letter-spacing: 3px;
   font-size: 3rem;
   margin: 3rem 0 0.5rem;
 }
@@ -9839,7 +9846,10 @@ section h2::after {
 }
 
 .contact {
-  background: #CCDBDC;
+  background: #182737;
+  color: white;
+  color: white;
+  color: #ffffff;
   padding: 5%;
   text-align: center;
 }
