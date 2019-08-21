@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Kristi&display=swap");
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -9697,16 +9698,24 @@ section h2::after {
   margin: 1rem auto;
 }
 
-.navbar-brand,
+.navbar-brand {
+  font-family: "Kristi", cursive;
+  font-size: 2.5rem;
+}
+
 .nav-link {
   font-family: "Oswald", sans-serif;
 }
 
 .jumbotron {
-  background: linear-gradient(45deg, #4b4b4b54, #030303ed), url("../img/me-and-buie.jpg");
+  background: linear-gradient(45deg, #2a3462cf, #08203d91), url("../img/me-and-buie.jpg");
   background-position: center;
   background-size: cover;
   height: auto;
+}
+.jumbotron .intro-copy {
+  padding: 5%;
+  max-width: 900px;
 }
 @media (min-width: 768px) {
   .jumbotron {
@@ -9743,10 +9752,9 @@ section h2::after {
   }
 }
 .jumbotron h1 {
-  font-family: "Oswald", sans-serif;
   letter-spacing: 3px;
-  font-size: 2.5rem;
-  margin: 2rem 0 0.5rem;
+  font-size: 3rem;
+  margin: 3rem 0 0.5rem;
 }
 @media (min-width: 768px) {
   .jumbotron h1 {
