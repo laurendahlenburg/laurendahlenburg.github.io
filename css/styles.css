@@ -9847,10 +9847,11 @@ nav.navbar .nav-link {
 
 .contact {
   background: #182737;
+  background: linear-gradient(45deg, #182737, #182737), url("../img/woods.jpg");
   color: white;
   color: white;
   color: #ffffff;
-  padding: 5%;
+  padding: 10%;
   text-align: center;
 }
 
