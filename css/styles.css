@@ -9657,6 +9657,17 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 .skills .card h3, .jumbotron h2, section h2 {
   text-transform: uppercase;
   font-size: 2rem;
@@ -9809,12 +9820,11 @@ nav.navbar .nav-link {
 
 .skills {
   visibility: visible;
-  background: #f7f7f7;
   text-align: center;
-  padding: 5%;
+  padding: 2% 0;
 }
 .skills .card-deck {
-  margin: 5% auto 10%;
+  margin: 0 auto 5%;
 }
 .skills .card {
   margin-bottom: 0;
