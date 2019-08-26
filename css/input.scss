@@ -193,7 +193,11 @@ nav.navbar {
 }
 
 .portfolio {
+    background: #eb2253;
+    background: linear-gradient(to right, #eb2354e0, #dc1a4acc), url('../img/waves.jpg');
+    background-position: bottom;
     padding: 10% 5%;
+    color: white;
     h2 {
         text-align: left;
         &::after {
@@ -206,8 +210,16 @@ nav.navbar {
     img {
         width: 100%;
         height: auto;
+        border: 10px solid white;
+        position: relative;
+        filter: grayscale(100%);
+        transition: all 1s;
+        &:hover {
+            filter: grayscale(0);
+        }
     }
     @media(min-width: 768px) {
+        background-attachment: fixed;
         .col {
             width: calc(100% / 2 - 1rem);
             display: inline-block;

@@ -9859,7 +9859,11 @@ nav.navbar .nav-link {
 }
 
 .portfolio {
+  background: #eb2253;
+  background: linear-gradient(to right, #eb2354e0, #dc1a4acc), url("../img/waves.jpg");
+  background-position: bottom;
   padding: 10% 5%;
+  color: white;
 }
 .portfolio h2 {
   text-align: left;
@@ -9870,8 +9874,18 @@ nav.navbar .nav-link {
 .portfolio img {
   width: 100%;
   height: auto;
+  border: 10px solid white;
+  position: relative;
+  filter: grayscale(100%);
+  transition: all 1s;
+}
+.portfolio img:hover {
+  filter: grayscale(0);
 }
 @media (min-width: 768px) {
+  .portfolio {
+    background-attachment: fixed;
+  }
   .portfolio .col {
     width: calc(100% / 2 - 1rem);
     display: inline-block;
