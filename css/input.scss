@@ -80,10 +80,13 @@ nav.navbar {
         padding: 5%;
         max-width: 900px;
         @media(min-width: 1690px) {
+            margin-top: 5vh;
+            max-width: none;
             text-align: center;
             max-width: none;
             p.animated.delay-1s {
                 margin: auto;
+                font-size: 1.5rem;
             }
         }
     }
@@ -119,6 +122,9 @@ nav.navbar {
         font-family: $heading-font;
         @media(min-width: 768px) {
             font-size: 5rem;
+        }
+        @media(min-width: 1280px) {
+            font-size: 7rem;
         }
         @media(min-width: 1690px) {
             font-size: 8rem;
