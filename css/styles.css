@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Kristi&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap");
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -9656,10 +9657,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
-.skills .card h3, .jumbotron h2 {
+.skills .card h3, .jumbotron h2, section h2 {
   text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 1rem;
+  font-size: 2rem;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
 .portfolio button, .jumbotron .btn-default {
@@ -9719,11 +9720,20 @@ nav.navbar .nav-link {
   background: linear-gradient(45deg, #2a3462cf, #08203d91), url("../img/me-and-buie.jpg");
   background-position: center;
   background-size: cover;
-  height: auto;
+  min-height: 100vh;
 }
 .jumbotron .intro-copy {
   padding: 5%;
   max-width: 900px;
+}
+@media (min-width: 1690px) {
+  .jumbotron .intro-copy {
+    text-align: center;
+    max-width: none;
+  }
+  .jumbotron .intro-copy p.animated.delay-1s {
+    margin: auto;
+  }
 }
 @media (min-width: 768px) {
   .jumbotron {
@@ -9762,10 +9772,16 @@ nav.navbar .nav-link {
 .jumbotron h1 {
   font-size: 3rem;
   margin: 3rem 0 0.5rem;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
 @media (min-width: 768px) {
   .jumbotron h1 {
     font-size: 5rem;
+  }
+}
+@media (min-width: 1690px) {
+  .jumbotron h1 {
+    font-size: 8rem;
   }
 }
 .jumbotron h2,
